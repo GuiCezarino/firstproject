@@ -8,7 +8,7 @@ class LuckyController extends AbstractController
 {
 
     /**
-     * @Route("/lucky/number", name="lucky_number")
+     * @Route("/", name="lucky_number")
      */
 
     public function getNumber()
@@ -47,10 +47,9 @@ class LuckyController extends AbstractController
    * @Route("/post/{slug}")
    */
 
-  public function single() {
-      return $this -> render('single.html.twig',
-      [
+  public function single($slug) {
+      return $this->render('lucky/single.html.twig', [
           'slug' => $slug
-      ]
+      ]);
   }
 }
