@@ -1,5 +1,48 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}
+    Home
+{% endblock %}
+
+
+
 {% block body %}
-    <h1>Your lucky number is {{ number }}</h1>
+
+        <h1> {{ title }} </h1>
+
+    {% if title is defined %}
+        <h2>Seu número da sorte é {{ number }}</h2>
+    {% endif %}
+
+    {# Lista de Postagens #}
+    {% for post in posts %}
+        <ul>
+            <li> {{ post.id }} - {{ post.title }} - {{ post.created_at|date("d/m/Y H:i:s") }} </li>
+        </ul>
+    {% endfor %}
+
+    <div id="name">
+
+    </div>
+
+    {# Lista de Postagens #}
+    {% include 'lucky/testpage.html.twig' %}
+
+
+
+    {{ 'Guilherme' ~ ' Cezarino' }}
+    <br>
+    {{ 5 + 9 * 10}}
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script>
+var name = prompt('Qual o seu nome? ');
+document.getElementById('name').innerHTML = name;
+
+</script>
+
 {% endblock %}
