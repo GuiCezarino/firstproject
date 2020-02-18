@@ -8,7 +8,7 @@ class CetController extends AbstractController
 {
 
     /**
-     * @Route("/cet/conteudo", name="cet_conteudo")
+     * @Route("/", name="cet_conteudo")
      */
 
     public function number()

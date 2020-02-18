@@ -8,7 +8,7 @@ class LuckyController extends AbstractController
 {
 
     /**
-     * @Route("/", name="lucky_number")
+     * @Route("/lucky/numberrr", name="lucky_number")
      */
 
     public function getNumber()
